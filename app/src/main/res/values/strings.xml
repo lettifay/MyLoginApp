@@ -3,7 +3,11 @@
 
     <string name="app_name">网关登陆</string>
     <string name="action_settings">设置</string>
+    <string name="action_main">主界面</string>
     <string name="switch_on">登陆</string>
     <string name="switch_off">注销</string>
+    <string name="status_on">已登录</string>
+    <string name="status_off">已注销</string>
+    <string name="title_activity_settings">登陆设置</string>
 
 </resources>

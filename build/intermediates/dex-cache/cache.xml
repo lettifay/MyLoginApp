@@ -2,6 +2,20 @@
 <items version="2" >
 
     <item
+        jar="E:\crf\myGit\MyLoginApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="E:\crf\myGit\MyLoginApp\app\build\intermediates\pre-dexed\debug\classes-b1c00f9362e88a74b520c3f32265a398d0ecaf63.jar" />
+    </item>
+    <item
+        jar="E:\programs\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="E:\crf\myGit\MyLoginApp\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-26dd53a51a1b31d0fa526f133d6a858613f9642a.jar" />
+    </item>
+    <item
         jar="E:\crf\myGit\MyLoginApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -14,20 +28,6 @@
         revision="21.1.2"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
         <dex dex="E:\crf\myGit\MyLoginApp\app\build\intermediates\pre-dexed\debug\classes-26b82341cbb35661fa7f8270e16debdd29fe0b37.jar" />
-    </item>
-    <item
-        jar="E:\programs\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="E:\crf\myGit\MyLoginApp\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-26dd53a51a1b31d0fa526f133d6a858613f9642a.jar" />
-    </item>
-    <item
-        jar="E:\crf\myGit\MyLoginApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="E:\crf\myGit\MyLoginApp\app\build\intermediates\pre-dexed\debug\classes-b1c00f9362e88a74b520c3f32265a398d0ecaf63.jar" />
     </item>
 
 </items>

@@ -9,7 +9,7 @@
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/gateway_switch"
+        android:id="@+id/mySwitch"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:checked="false"
