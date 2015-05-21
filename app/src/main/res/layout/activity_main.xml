@@ -13,16 +13,18 @@
         android:checked="false"
         android:textOff="@string/switch_off"
         android:textOn="@string/switch_on"
+        android:layout_marginBottom="104dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="134dp" />
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
+        android:src="@drawable/bupt"
         android:layout_above="@+id/mySwitch"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="80dp"
-        android:src="@drawable/bupt" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="110dp" />
+
 </RelativeLayout>

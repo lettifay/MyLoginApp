@@ -8,6 +8,7 @@
     <string name="switch_off">注销</string>
     <string name="status_on">已登录</string>
     <string name="status_off">已注销</string>
+    <string name="notification">请配置学号和密码</string>
     <string name="title_activity_settings">登陆设置</string>
 
 </resources>

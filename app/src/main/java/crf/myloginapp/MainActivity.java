@@ -5,12 +5,17 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import com.github.kevinsawicki.http.HttpRequest;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -22,36 +27,54 @@ public class MainActivity extends ActionBarActivity {
         SharedPreferences mySharedPreferences = getSharedPreferences("mySP",Activity.MODE_PRIVATE);
         final String usr = mySharedPreferences.getString("username","");
         final String pwd = mySharedPreferences.getString("password","");
-
         Switch aSwitch = (Switch)findViewById(R.id.mySwitch);
-        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked) {
-//                    login(usr, pwd, true);
-                } else {
-//                    logout(usr, pwd, false);
+
+        if(usr!=""&&pwd!=""){
+            aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        new Thread(){
+                            @Override
+                            public void run(){
+                                login(usr, pwd, true);
+                            }
+                        }.start();
+                        showToast(isChecked);
+                    } else {
+                        new Thread(){
+                            @Override
+                            public void run(){
+                                logout(usr, pwd, true);
+                            }
+                        }.start();
+                        showToast(isChecked);
+                    }
                 }
-            }
-        });
+            });
+        }else{
+            Toast toast = Toast.makeText(this,R.string.notification,Toast.LENGTH_LONG);
+            toast.show();
+        }
     }
 
     private void login(String usr, String pwd, final Boolean isChecked){
-        new Thread(new Runnable() {
-            public void run() {
-                //do log in
-//                showToast(isChecked);
-            }
-        }).start();
+        Log.i("login","usr is :" + usr);
+        Log.i("login","pwd is :" + pwd);
+        Map<String, String> data = new HashMap<String, String>();
+        data.put("DDDDD", usr);
+        data.put("upass", pwd);
+        data.put("AMKKey","");
+        HttpRequest.post("http://10.3.8.211").form(data).created();
     }
 
     private void logout(String usr, String pwd, final Boolean isChecked){
-        new Thread(new Runnable() {
-            public void run() {
-                //do log out
-//                showToast(isChecked);
-            }
-        }).start();
+        String cookieString = "myusername=" + usr + "; username=" + usr + "; smartdot=" + pwd;
+        Log.i("logout","cookieString is: " + cookieString);
+        HttpRequest.get("http://10.3.8.211/F.htm").header("Cookie", cookieString)
+                .accept("application/json")
+                .contentType();
     }
+
 
     private void showToast(Boolean isChecked) {
         if (isChecked){

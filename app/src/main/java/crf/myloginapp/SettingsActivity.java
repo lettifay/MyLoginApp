@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class SettingsActivity extends ActionBarActivity {
@@ -31,6 +32,9 @@ public class SettingsActivity extends ActionBarActivity {
                 editor.putString("username",uET.getText().toString());
                 editor.putString("password",pET.getText().toString());
                 editor.commit();
+
+                Intent myIntent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(myIntent);
             }
         });
     }
